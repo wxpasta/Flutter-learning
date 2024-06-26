@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'model/post.dart';
 
 // 简化代码
@@ -12,11 +13,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
-      theme: ThemeData(
-        primarySwatch: Colors.yellow
-      )
-    );
+        home: Home(), theme: ThemeData(primarySwatch: Colors.yellow));
   }
 }
 
@@ -29,16 +26,12 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Image.network(posts[index].imageUrl),
           SizedBox(height: 16.0),
-          Text(
-            posts[index].title,
-            // style: Theme.of(context).textTheme.title
-            style: Theme.of(context).textTheme.headline6
-          ),
-          Text(
-            posts[index].author,
-            // style: Theme.of(context).textTheme.subhead
-            style: Theme.of(context).textTheme.subtitle1
-          ),
+          Text(posts[index].title,
+              // style: Theme.of(context).textTheme.title
+              style: Theme.of(context).textTheme.headlineMedium),
+          Text(posts[index].author,
+              // style: Theme.of(context).textTheme.subhead
+              style: Theme.of(context).textTheme.displayLarge),
           SizedBox(height: 16.0),
         ],
       ),
@@ -46,8 +39,8 @@ class Home extends StatelessWidget {
   }
 
   @override
-    Widget build(BuildContext context) {
-      return Scaffold(
+  Widget build(BuildContext context) {
+    return Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
           title: Text('NINGHAO'),
@@ -56,24 +49,21 @@ class Home extends StatelessWidget {
         body: ListView.builder(
           itemCount: posts.length,
           itemBuilder: _listItemBuilder,
-        )
-      );
-    }
+        ));
+  }
 }
 
 class Hello extends StatelessWidget {
   @override
-    Widget build(BuildContext context) {
-      return Center(
-        child: Text(
-          'hello',
-          textDirection: TextDirection.ltr,// 从左向右阅读
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('hello',
+          textDirection: TextDirection.ltr, // 从左向右阅读
           style: TextStyle(
             fontSize: 40.0,
             fontWeight: FontWeight.bold,
             color: Colors.black87,
-          )
-        ),
-      );
-    }
+          )),
+    );
+  }
 }
