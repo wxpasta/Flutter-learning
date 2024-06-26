@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../model/post.dart';
 
 class ListViewDemo extends StatelessWidget {
@@ -12,10 +13,10 @@ class ListViewDemo extends StatelessWidget {
           SizedBox(height: 16.0),
           Text(posts[index].title,
               // style: Theme.of(context).textTheme.title
-              style: Theme.of(context).textTheme.headline6),
+              style: Theme.of(context).textTheme.headlineSmall),
           Text(posts[index].author,
               // style: Theme.of(context).textTheme.subhead
-              style: Theme.of(context).textTheme.subtitle1),
+              style: Theme.of(context).textTheme.labelMedium),
           SizedBox(height: 16.0),
         ],
       ),

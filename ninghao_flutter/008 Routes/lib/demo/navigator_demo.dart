@@ -19,7 +19,7 @@ class NavigatorDemo extends StatelessWidget {
             //     );
             //   },
             // ),
-            FlatButton(
+            TextButton(
               child: Text('About'),
               onPressed: () {
                 Navigator.pushNamed(context, '/about');
@@ -35,7 +35,7 @@ class NavigatorDemo extends StatelessWidget {
 class CustomPage extends StatelessWidget {
   final String title;
 
-  CustomPage({this.title});
+  CustomPage({required this.title});
 
   @override
   Widget build(BuildContext context) {

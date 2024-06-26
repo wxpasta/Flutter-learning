@@ -20,7 +20,7 @@ class ContainerBoxDecorationDemo extends StatelessWidget {
           // repeat: ImageRepeat.repeatY,
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
-            Colors.indigoAccent[400].withOpacity(0.5),
+            Colors.indigoAccent[400]!.withOpacity(0.5),
             BlendMode.hardLight,
           ),
         ),
@@ -38,7 +38,7 @@ class ContainerBoxDecorationDemo extends StatelessWidget {
             decoration: BoxDecoration(
               color: Color.fromRGBO(3, 54, 255, 1.0),
               border: Border.all(
-                color: Colors.indigoAccent[100],
+                color: Colors.indigoAccent[100]!,
                 width: 3.0,
                 style: BorderStyle.solid,
               ),
@@ -117,7 +117,7 @@ class TextDemo extends StatelessWidget {
       textAlign: TextAlign.left,
       style: _textStyle,
       maxLines: 3, // 限制最大行数
-      overflow: TextOverflow.ellipsis,// 多余部分处理
+      overflow: TextOverflow.ellipsis, // 多余部分处理
     );
   }
 }

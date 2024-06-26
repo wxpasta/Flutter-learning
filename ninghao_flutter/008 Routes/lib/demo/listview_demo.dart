@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import './post_show.dart';
+
 import '../model/post.dart';
+import './post_show.dart';
 
 class ListViewDemo extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
@@ -18,10 +19,10 @@ class ListViewDemo extends StatelessWidget {
               SizedBox(height: 16.0),
               Text(posts[index].title,
                   // style: Theme.of(context).textTheme.title),
-                  style: Theme.of(context).textTheme.headline6),
+                  style: Theme.of(context).textTheme.headlineSmall),
               Text(posts[index].author,
                   // style: Theme.of(context).textTheme.subhead),
-                  style: Theme.of(context).textTheme.subtitle1),
+                  style: Theme.of(context).textTheme.labelMedium),
               SizedBox(height: 16.0),
             ],
           ),
@@ -33,9 +34,8 @@ class ListViewDemo extends StatelessWidget {
                   highlightColor: Colors.white.withOpacity(0.1),
                   onTap: () {
                     // debugPrint('Tap');
-                    Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => PostShow(post: posts[index]))
-                    );
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => PostShow(post: posts[index])));
                   }),
             ),
           ),

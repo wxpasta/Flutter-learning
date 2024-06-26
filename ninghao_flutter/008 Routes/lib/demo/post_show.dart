@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+
 import '../model/post.dart';
 
 class PostShow extends StatelessWidget {
   final Post post;
 
   PostShow({
-    @required this.post,
+    required this.post,
   });
 
   @override
@@ -17,9 +18,7 @@ class PostShow extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Image.network(
-            post.imageUrl
-          ),
+          Image.network(post.imageUrl),
           Container(
             padding: EdgeInsets.all(32.0),
             width: double.infinity,
@@ -27,12 +26,15 @@ class PostShow extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 // Text('${post.title}', style: Theme.of(context).textTheme.title),
-                Text('${post.title}', style: Theme.of(context).textTheme.headline6),
+                Text('${post.title}',
+                    style: Theme.of(context).textTheme.headlineSmall),
                 // Text('${post.author}', style: Theme.of(context).textTheme.subhead),
-                Text('${post.author}', style: Theme.of(context).textTheme.subtitle1),
+                Text('${post.author}',
+                    style: Theme.of(context).textTheme.titleLarge),
                 SizedBox(height: 32.0),
                 // Text('${post.description}', style: Theme.of(context).textTheme.body1),
-                Text('${post.description}', style: Theme.of(context).textTheme.bodyText2),
+                Text('${post.description}',
+                    style: Theme.of(context).textTheme.bodyLarge),
               ],
             ),
           ),
@@ -40,4 +42,4 @@ class PostShow extends StatelessWidget {
       ),
     );
   }
-} 
+}
