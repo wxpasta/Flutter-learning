@@ -23,7 +23,7 @@ class DrawerDemo extends StatelessWidget {
                     'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1231674771,1731834691&fm=26&gp=0.jpg'),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
-                    Colors.yellow[400].withOpacity(0.6), BlendMode.hardLight),
+                    Colors.yellow[400]!.withOpacity(0.6), BlendMode.hardLight),
               ),
             ),
           ),
